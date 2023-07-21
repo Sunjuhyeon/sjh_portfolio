@@ -4,8 +4,24 @@ import emailjs from '@emailjs/browser';
 
 
 function Contact(props) {
-    const form = useRef();
 
+    // 개인정보 약관 활성화//
+    const [isChecked, setIsChecked] = useState(false);
+    
+    const handleCheckboxChange = (event) => {
+        setIsChecked(event.target.checked);
+    }
+    const handleButtonClick = () => {
+        if(!isChecked){
+            alert("개인정보정책 약관에 동의해주세요");
+        }else{
+            alert("메일이 전송되었습니다! 빠른 회신 드리겠습니다")
+        }
+    }
+    
+    //submit시 이메일로 데이터전송
+    const form = useRef();
+    
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -56,22 +72,44 @@ function Contact(props) {
                                                     type={v.type}
                                                     placeholder={v.placeholder}
                                                     name={v.name}
+                                                    required
                                                 />
                                             </li>
                                         )
                                     })
                                 }
                         </ul>
-                        <div id={`${contact.submit}`}>
+                        <div id={`${contact.policy}`}>
+                            {
+                                props.contactdb.policy.map((v, x) =>{
+                                    return(
+                                        <div key={x} className = {`${contact.formsub} ${v.liCls}`}>
+                                            <input 
+                                                className={`${v.inputCls}`}
+                                                type={v.type}
+                                                value={v.value}
+                                                id={v.id}
+                                                checked={isChecked}
+                                                onChange={handleCheckboxChange}
+                                            />
+                                            <label for={v.for} className={v.labelCls}>{v.label}</label>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div>
                             {
                                 props.contactdb.submit.map((v, x) =>{
                                     return(
                                         <div key={x} className = {`${contact.formsub} ${v.liCls}`}>
                                             <input 
-                                                className={`${v.inputCls} ${contact.footerCls}`}
+                                                className={`${v.inputCls} ${isChecked ? contact.submitTrue : contact.submitFlase}`}
                                                 type={v.type}
                                                 value={v.value}
                                                 id={v.id}
+                                                disabled={!isChecked}
+                                                onClick={handleButtonClick}
                                             />
                                             <label for={v.for} className={v.labelCls}>{v.label}</label>
                                         </div>

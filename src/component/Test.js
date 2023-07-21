@@ -5,7 +5,7 @@ import test from '../scss/test.module.css'
 import "swiper/css";
 import 'swiper/css/effect-fade';
 
-import { EffectFade, Keyboard, Controller } from "swiper";
+import {EffectFade, Keyboard, Controller } from "swiper";
 
 function Test(props) {
     const [controlledSwiper, setControlledSwiper] = useState(null);
@@ -25,6 +25,7 @@ function Test(props) {
                         keyboard={{
                             enabled: true,
                         }}
+                        effect={'coverflow'}
                         centeredSlides={true}
                         autoHeight={true}
                         breakpoints={{
@@ -45,10 +46,8 @@ function Test(props) {
                                 return (
                                     <SwiperSlide className={`${v.slidecls} ${test.swiperslide}`}>
                                         <div key={x} className={`${test.box}`}>
-                                            <div>
-                                                <a href="" className={`d-flex justify-content-center`}>
+                                            <div className={`${test.imgDiv}`}>
                                                     <img className={`${v.imgcls} ${test.cardImg}`} src={v.img} alt="dummyImg" />
-                                                </a>
                                             </div>
                                         </div>
                                     </SwiperSlide>

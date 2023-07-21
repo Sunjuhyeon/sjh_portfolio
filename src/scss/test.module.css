@@ -1,15 +1,29 @@
 .section{
     background-color: rgb(212, 201, 178);
 }
-.box{
-    position: relative;
-}
-.subswiper{
-    position: absolute;
-    bottom: 10%;
-    right: 50%;
-    width: 50%;
-}
+
 .subswiperbox{
-    float: right;
+    width: 50vw;
+}
+.swiperslide {
+    display: flex;
+    justify-content: center;
+}
+
+.cardImg {
+    border-radius: 10px;
+    background-color: transparent;
+    width: 70vw;
+}
+
+@media(min-width:992px) {
+    .cardImg {
+        width: 50vw;
+    }
+}
+
+@media(min-width:1200px) {
+    .cardImg {
+        width: 30vw;
+    }
 }

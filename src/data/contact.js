@@ -47,18 +47,20 @@ const contactDB = {
             ,name:"text"
         }
     ]
-    ,submit :[
-        , {
+    ,policy :[
+        {
             type: "checkbox"
-            ,liCls: "d-flex justify-content-end py-3"
-            ,inputCls: ""
-            ,id: "policy"
-            ,value: "policy"
-            ,for: "policy"
-            ,label: "개인정보정책 약관 동의"
-            ,labelCls: "d-flex align-items-center"
+            , liCls: "d-flex justify-content-end py-3"
+            , inputCls: ""
+            , id: "policy"
+            , value: "policy"
+            , for: "policy"
+            , label: "개인정보정책 약관 동의"
+            , labelCls: "d-flex align-items-center"
         }
-        , {
+    ]
+    ,submit :[
+        {
             type: "submit"
             ,liCls: ""
             ,inputCls: "w-100"
