@@ -1,19 +1,34 @@
-body {
-  font-family: "SUITE";
-  font-weight: 400;
+.em {
+  font-family: "Em";
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
-  font-family: "SUITE";
+
+body {
+  font-family: "Pretendard";
+  font-weight: 200;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: "Pretendard";
   font-weight: 400;
 }
 body a {
   text-decoration: none;
   color: #070707;
-  font-family: "SUITE";
-  font-weight: 800;
+  font-weight: 300;
 }
-body ul, body li {
+body ul,
+body li {
   list-style: none;
+}
+body #hd nav a {
+  font-size: 1.6rem;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  padding: 0 1.5rem;
 }
 body #banner .s1 {
   background-image: url(../img/slide1.jpg);
