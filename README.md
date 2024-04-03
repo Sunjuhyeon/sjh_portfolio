@@ -1,8 +1,11 @@
-AppTest_Sunjuhyeon_23.06.27
-Version : Node_v14.21.3 / npm_v6.14.18
-Plugin : Bootstrap^5.2.3 / BootstrapIcon^1.10.0 / Swiper^9.4.1 / Aos^2.3.1 / Sass^1.63.6
-Font : font-family: 'Montserrat', sans-serif;
-       font-family: 'Noto Sans KR', sans-serif;
-       font-family: 'Noto Serif KR', serif;
+## 자기소개용 포트폴리오 페이지
+리액트를 사용하여 제작한 자기소개 페이지입니다.
+메일을 보낼 수 있는 Contact기능이 포함되어있습니다.
 
-Svg : logo
+### 사용언어
+React, Scss
+
+### 주요기능
+1. 사용가능 스킬을 보여줍니다. AOS라이브러리를 커스텀하여 동적으로 구현하였습니다.
+2. 부트스트랩 템플릿 커스텀을 통해 빠른 웹페이지 구축이 가능합니다.
+3. MailJS라는 javascript라이브러리를 사용하여 서버를 거치지 않고 이메일 전송이 가능합니다.
